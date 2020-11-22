@@ -44,6 +44,16 @@ class Option extends Model
     }
 
     /**
+     * Get the table associated with the model.
+     *
+     * @return string
+     */
+    public function getTable()
+    {
+        return config('options.table') ?? parent::getTable();
+    }
+
+    /**
      * Get the specified option value.
      *
      * @param  string  $key
